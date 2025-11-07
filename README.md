@@ -1,13 +1,13 @@
 # TrashMarket - Gorbagana Test DApp
 
-This is a test DApp marketplace built to test the Gorbag wallet extension connection functionality. It allows users to connect their Gorbag wallet, view their balance, and perform mock transactions (self-to-self transfers) to test the wallet integration.
+This is a test DApp marketplace built to test the Gorbag wallet extension connection functionality. It allows users to connect their Gorbag wallet, view their balance, and perform real transactions settled on the Gorbagana network to test the wallet integration.
 
 ## Features
 
 - Wallet connection/disconnection functionality
 - Display of connected wallet address and balance
 - Mock marketplace with sample NFTs
-- Mock transaction functionality (transfers a small amount to self)
+- Transaction functionality (transfers a small amount to self)
 - Product filtering by category
 
 ## Setup
@@ -17,12 +17,19 @@ This is a test DApp marketplace built to test the Gorbag wallet extension connec
 pnpm install
 ```
 
-2. Run the development server:
-```bash
-pnpm run dev
+2. Copy your `.example.env` to your `.env` and set the Merchant/Store Address Parameter. This is the address that'd recive the funds of the mock NFT you're paying for
+```
+MERCHANT_ADDRESS=A-VALID-GORBAGANA-ADDRESS # a valid address that'll receive the funds of the items in the trashmarket
+NETWORK=testnet
+RPC_URL=A-VALID-RPC-URL # you can use the official one provided by the Gorbagana Team i.e. https://rpc.gorbagana.wtf
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+3. Run the development server:
+```bash
+npx next dev --webpack
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Testing Wallet Connection
 

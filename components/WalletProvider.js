@@ -13,7 +13,7 @@ export const WalletProvider = ({ children }) => {
   ], []);
 
   // Using Gorbagana RPC endpoint (replace with actual Gorbagana endpoint)
-  const endpoint = 'https://api.devnet.solana.com'; // Placeholder - replace with actual Gorbagana endpoint
+  const endpoint = 'https://rpc.gorbagana.wtf'; // Testnet Gorbagana endpoint
 
   return (
     <ConnectionProvider endpoint={endpoint}>
